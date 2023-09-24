@@ -5,12 +5,11 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
-$routes->get('test', 'MainController::test');
-$routes->get('delete/(:any)', 'MainController::delete/$1');
-$routes->post('save', 'MainController::save');
-$routes->get('update/(:any)', 'MainController::update/$1');
-//$routes->post('updates', 'MainController::updates');
+$routes->get('/', 'MainController::index');
+$routes->post('/saveMusic', 'MainController::saveMusic');
+$routes->post('/savePlaylist', 'MainController::savePlaylist');
+$routes->post('/addToPlaylist', 'MainController::addToPlaylist');
+$routes->get('/(:any)', 'MainController::playlist/$1');
 
 
 
