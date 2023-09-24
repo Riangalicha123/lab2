@@ -1,0 +1,72 @@
+CRITICAL - 2023-09-17 00:52:55 --> Undefined property: App\Controllers\MainController::$main
+in APPPATH\Controllers\MainController.php on line 35.
+ 1 APPPATH\Controllers\MainController.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\MainController::$main', 'C:\\laragon\\www\\3f2\\app\\Controllers\\MainController.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->update('3')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-17 00:53:23 --> Undefined property: App\Controllers\MainController::$main
+in APPPATH\Controllers\MainController.php on line 35.
+ 1 APPPATH\Controllers\MainController.php(35): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\MainController::$main', 'C:\\laragon\\www\\3f2\\app\\Controllers\\MainController.php', 35)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->update('3')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-17 00:54:24 --> Undefined variable $main
+in APPPATH\Controllers\MainController.php on line 51.
+ 1 APPPATH\Controllers\MainController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $main', 'C:\\laragon\\www\\3f2\\app\\Controllers\\MainController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-17 00:55:03 --> Undefined property: App\Controllers\MainController::$main
+in APPPATH\Controllers\MainController.php on line 51.
+ 1 APPPATH\Controllers\MainController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\MainController::$main', 'C:\\laragon\\www\\3f2\\app\\Controllers\\MainController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-17 00:56:28 --> Undefined variable $main
+in APPPATH\Controllers\MainController.php on line 51.
+ 1 APPPATH\Controllers\MainController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $main', 'C:\\laragon\\www\\3f2\\app\\Controllers\\MainController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-17 00:57:13 --> Undefined variable $main
+in APPPATH\Controllers\MainController.php on line 51.
+ 1 APPPATH\Controllers\MainController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $main', 'C:\\laragon\\www\\3f2\\app\\Controllers\\MainController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-17 00:57:18 --> Undefined variable $main
+in APPPATH\Controllers\MainController.php on line 51.
+ 1 APPPATH\Controllers\MainController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $main', 'C:\\laragon\\www\\3f2\\app\\Controllers\\MainController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-17 00:57:31 --> Undefined variable $main
+in APPPATH\Controllers\MainController.php on line 51.
+ 1 APPPATH\Controllers\MainController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $main', 'C:\\laragon\\www\\3f2\\app\\Controllers\\MainController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
+CRITICAL - 2023-09-17 00:59:11 --> Undefined variable $main
+in APPPATH\Controllers\MainController.php on line 51.
+ 1 APPPATH\Controllers\MainController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $main', 'C:\\laragon\\www\\3f2\\app\\Controllers\\MainController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->save()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\3f2\\public\\index.php')
