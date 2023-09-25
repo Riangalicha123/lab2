@@ -4,16 +4,16 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class Songs extends Model
+class BridgeModel extends Model
 {
     protected $DBGroup          = 'default';
-    protected $table            = 'music';
-    protected $primaryKey       = 'music_id';
+    protected $table            = 'bridge';
+    protected $primaryKey       = 'id';
     protected $useAutoIncrement = true;
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['title', 'artist', 'album', 'genre', 'file_path'];
+    protected $allowedFields    = ['song_id','playlist_id'];
 
     // Dates
     protected $useTimestamps = false;
