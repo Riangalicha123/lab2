@@ -1,0 +1,14 @@
+CRITICAL - 2023-09-25 09:21:29 --> Invalid file: "include/header.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('include/header.php')
+ 2 SYSTEMPATH\View\View.php(467): CodeIgniter\View\View->render('include/header.php', null, true)
+ 3 APPPATH\Views\main.php(1): CodeIgniter\View\View->include('include/header.php')
+ 4 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\GitHub\\lab2\\app\\Views\\main.php')
+ 5 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 6 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('main', [], true)
+ 7 APPPATH\Controllers\MainController.php(23): view('main', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\MainController->main()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MainController))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\GitHub\\lab2\\public\\index.php')
