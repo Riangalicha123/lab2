@@ -30,11 +30,11 @@
 
 
 
-                    <button type="submit" class="btn btn-success">Add Song</button>
+                    <button type="submit" class="btn btn-dark">Add Song</button>
                 </form>
             </div>
             <div class="modal-footer bg-dark">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
 
             </div>
         </div>

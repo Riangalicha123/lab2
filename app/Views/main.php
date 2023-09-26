@@ -28,7 +28,7 @@
                     <input type="hidden" id="playlistIDInput" name="playlistID" value="">
                   <?php endif ?>
                   <div class="input-group-append">
-                    <button type="submit" class="btn btn-primary">Search</button>
+                    <button type="submit" class="btn btn-dark">Search</button>
                   </div>
                 </div>
               </form>
@@ -43,10 +43,10 @@
 
         <!-- Action Buttons -->
         <div class="mb-3">
-          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">My
-            Playlist</button> <!-- Applied a red color -->
-          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#manageSongsModal">Manage
-            Songs</button> <!-- Applied a red color -->
+          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">My
+            Playlist
+          </button> 
+          
         </div>
     </div>
 
@@ -55,6 +55,9 @@
     <div class="audio-controls mb-3">
       <audio id="audio" controls autoplay></audio>
     </div>
+          <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#manageSongsModal">Manage
+            Songs
+          </button> 
 
     <!-- Music Playlist -->
       <ul class="list-group" id="playlist">
@@ -64,16 +67,16 @@
             <?= $musicItem['title'] ?>
             <?php if ($context === 'playlist'): ?>
               <div class="btn-group">
-                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"
+                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal"
                   onclick="setMusicID('<?= $musicItem['music_id'] ?>')">
                   <i class="fas fa-plus"></i>+
                 </button>
-                <a href="<?= site_url('/removeFromPlaylist/' . $musicItem['id']) ?>" class="btn btn-danger btn-sm">
+                <a href="<?= site_url('/removeFromPlaylist/' . $musicItem['id']) ?>" class="btn btn-light btn-sm">
                   <i class="fas fa-minus"></i>-
                 </a>
               </div>
             <?php else: ?>
-              <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#myModal"
+              <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#myModal"
                 onclick="setMusicID('<?= $musicItem['music_id'] ?>')">
                 <i class="fas fa-plus"></i>+
               </button>
