@@ -11,30 +11,31 @@
 
 
 
-        <div class="container">
-          <div class="row">
-            <div class="col">
-              <a href="/main" class="btn btn-dark">
-                <i class="fas fa-home"></i> Main
-              </a>
-            </div>
-            <div class="col">
-              <!-- Search Form -->
-              <form action="/search" method="get">
-                <div class="input-group">
-                  <input type="search" name="search" class="form-control" placeholder="Search song">
-                  <input type="hidden" name="context" value="<?= $context ?>">
-                  <?php if ($context === 'playlist'): ?>
-                    <input type="hidden" id="playlistIDInput" name="playlistID" value="">
-                  <?php endif ?>
-                  <div class="input-group-append">
-                    <button type="submit" class="btn btn-dark">Search</button>
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <a href="/main" class="btn btn-dark ml-2">
+                  <i class="fas fa-home"></i> Home
+                </a>
+              </div>
+              <div class="col">
+                <!-- Search Form -->
+                <form action="/search" method="get">
+                  <div class="input-group">
+                    <input type="search" name="search" class="form-control" placeholder="Search song">
+                    <input type="hidden" name="context" value="<?= $context ?>">
+                    <?php if ($context === 'playlist'): ?>
+                      <input type="hidden" id="playlistIDInput" name="playlistID" value="">
+                    <?php endif ?>
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-dark">Search</button>
+                    </div>
                   </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
           </div>
-        </div>
+
 
 
 
@@ -71,7 +72,7 @@
                   onclick="setMusicID('<?= $musicItem['music_id'] ?>')">
                   <i class="fas fa-plus"></i>+
                 </button>
-                <a href="<?= site_url('/removeFromPlaylist/' . $musicItem['id']) ?>" class="btn btn-light btn-sm">
+                <a href="<?= site_url('/removeFromPlaylist/' . $musicItem['id']) ?>" class="btn btn-secondary btn-sm">
                   <i class="fas fa-minus"></i>-
                 </a>
               </div>

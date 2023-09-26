@@ -16,7 +16,7 @@
                                     <?= $playlist['name'] ?>
                                 </a>
 
-                                <a href="/delete_playlist/<?= $playlist['playlist_id'] ?>" class="btn btn-danger btn-sm">
+                                <a href="/delete_playlist/<?= $playlist['playlist_id'] ?>" class="btn btn-secondary btn-sm">
                                     Delete
                                 </a>
                             </div>
@@ -30,12 +30,12 @@
                     <div class="input-group">
                         <input type="text" name="playlist_name" class="form-control" placeholder="Enter playlist name"
                             value="">
-                        <button type="submit" class="btn btn-primary">Create</button>
+                        <button type="submit" class="btn btn-dark">Create</button>
                     </div>
                 </form>
             </div>
             <div class="modal-footer bg-dark">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
