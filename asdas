@@ -1,0 +1,28 @@
+-- Create the 'playlists' table
+CREATE TABLE playlists (
+    playlist_id INT AUTO_INCREMENT PRIMARY KEY,
+    name TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+
+-- Create the 'music' table
+CREATE TABLE music (
+    music_id INT AUTO_INCREMENT PRIMARY KEY,
+    title TEXT NOT NULL,
+    artist TEXT NULL,
+    file_path TEXT NOT NULL,
+    duration INT NULL,
+    album TEXT NULL,
+    genre TEXT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create the 'playlist_track' table
+CREATE TABLE playlist_track (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    playlist_id INT NOT NULL,
+    music_id INT NOT NULL,
+    FOREIGN KEY (playlist_id) REFERENCES playlists(playlist_id),
+    FOREIGN KEY (music_id) REFERENCES music(music_id)
+);
