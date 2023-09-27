@@ -19,7 +19,7 @@ class MusicController extends BaseController
     public function __construct()
     {
         $this->music = new \App\Models\Music();
-        $this->spotify = new \App\Models\Playlist();
+        $this->spotify = new \App\Models\Spotify();
         $this->subaybayan = new \App\Models\Subaybayan();
         $this->db = \Config\Database::connect();
         helper('form');
