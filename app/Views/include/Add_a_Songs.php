@@ -8,7 +8,7 @@
             <div class="modal-body">
 
                 <!-- Inside the Manage Songs Modal -->
-                <form action="/upload" method="post" enctype="multipart/form-data">
+                <form action="/magupload" method="post" enctype="multipart/form-data">
 
                     <!-- Hidden input for music_id if needed for editing -->
                     <input type="hidden" name="music_id" value="">
