@@ -7,8 +7,8 @@ use App\Controllers\BaseController;
 class MusicController extends BaseController
 {
     private $music;
-    private $playlists;
-    private $playlist_track;
+    private $spotify;
+    private $subaybayan;
     private $db;
 
     public function index()
@@ -19,39 +19,39 @@ class MusicController extends BaseController
     public function __construct()
     {
         $this->music = new \App\Models\Music();
-        $this->playlists = new \App\Models\Playlist();
-        $this->playlist_track = new \App\Models\TrackPlaylist();
+        $this->spotify = new \App\Models\Playlist();
+        $this->subaybayan = new \App\Models\Subaybayan();
         $this->db = \Config\Database::connect();
         helper('form');
     }
 
-    public function main()
+    public function viewmain()
     {
         $context = 'home';
         $data = [
-            'playlists' => $this->playlists->findAll(),
+            'spotify' => $this->spotify->findAll(),
             'music' => $this->music->findAll(),
             'context' => $context,
         ];
-        return view('main', $data);
+        return view('viewmain', $data);
     }
 
 
-    public function upload()
+    public function magupload()
 {
     $file = $this->request->getFile('song');
     $newFileName = $file->getRandomName();
 
     $data = [
-        'title' => pathinfo($file->getName(), PATHINFO_FILENAME), // Set the title based on the filename
-        'artist' => 'Unknown', // Set a default artist if not provided
+        'title' => pathinfo($file->getName(), PATHINFO_FILENAME), 
+        'artist' => 'Unknown', 
         'file_path' => $newFileName,
-        'duration' => 0, // You can calculate the duration if needed
-        'album' => 'Unknown', // Set a default album if not provided
-        'genre' => 'Unknown', // Set a default genre if not provided
+        'duration' => 0, 
+        'album' => 'Unknown', 
+        'genre' => 'Unknown',
     ];
 
-    $rules = [
+    $tuntunin = [
         'song' => [
             'uploaded[song]',
             'mime_in[song,audio/mpeg]',
@@ -60,10 +60,10 @@ class MusicController extends BaseController
         ],
     ];
 
-    if ($this->validate($rules)) {
+    if ($this->validate($tuntunin)) {
         if ($file->isValid() && !$file->hasMoved()) {
             if ($file->move(FCPATH . 'uploads\songs', $newFileName)) {
-                // Save the data to the database
+                
                 $this->music->save($data);
                 echo 'File uploaded successfully';
             } else {
@@ -74,7 +74,7 @@ class MusicController extends BaseController
         $data['validation'] = $this->validator;
     }
 
-    return redirect()->to('/main');
+    return redirect()->to('/viewmain');
 }
 
 
@@ -90,19 +90,19 @@ class MusicController extends BaseController
             'music_id' => $musicID
         ];
 
-        $this->playlist_track->insert($data);
+        $this->subaybayan->insert($data);
 
-        return redirect()->to('/main');
+        return redirect()->to('/viewmain');
     }
 
     public function removeFromPlaylist($musicID)
     {
 
-        $builder = $this->db->table('playlist_track');
+        $builder = $this->db->table('subaybayan');
         $builder->where('id', $musicID);
         $builder->delete();
 
-        return redirect()->to('/main');
+        return redirect()->to('/viewmain');
     }
 
     public function create_playlist()
@@ -112,57 +112,48 @@ class MusicController extends BaseController
             'music' => $this->music->findAll(),
         ];
 
-        $this->playlists->insert($data);
-        return redirect()->to('/main');
+        $this->spotify->insert($data);
+        return redirect()->to('/viewmain');
     }
-    // public function edit_playlist($playlist) //unnecesarry
-    // {
-    //     $data = [
-    //         'playlist_records' => $this->playlists->where('playlist_id', $playlist)->first(),
-    //         'playlists' => $this->playlists->findAll(),
-    //     ];
-
-    //     return view('main', $data);
-    // }
 
     public function delete_playlist($playlistID)
     {
         // Find the playlist by its ID
-        $playlist = $this->playlists->find($playlistID);
+        $playlist = $this->spotify->find($playlistID);
 
         if ($playlist) {
 
-            $this->playlist_track->where('playlist_id', $playlistID)->delete();
+            $this->subaybayan->where('playlist_id', $playlistID)->delete();
 
             // Now, delete the playlist
-            $this->playlists->delete($playlistID);
+            $this->spotify->delete($playlistID);
         }
 
 
-        return redirect()->to('/main');
+        return redirect()->to('/viewmain');
     }
 
     public function viewPlaylist($playlistID)
     {
         $context = 'playlist';
 
-        $builder = $this->db->table('playlist_track');
+        $builder = $this->db->table('subaybayan');
 
-        $builder->select('playlist_track.id, music.*');
+        $builder->select('subaybayan.id, music.*');
 
-        $builder->join('music', 'music.music_id = playlist_track.music_id');
+        $builder->join('music', 'music.music_id = subaybayan.music_id');
 
-        $builder->where('playlist_track.playlist_id', $playlistID);
+        $builder->where('subaybayan.playlist_id', $playlistID);
 
         $musicInPlaylist = $builder->get()->getResultArray();
 
         $data = [
             'music' => $musicInPlaylist,
-            'playlists' => $this->playlists->findAll(),
+            'spotify' => $this->spotify->findAll(),
             'context' => $context,
         ];
 
-        return view('main', $data);
+        return view('viewmain', $data);
     }
 
     public function search()
@@ -180,24 +171,24 @@ class MusicController extends BaseController
             // Search songs in the current playlist
             $playlistID = $this->request->getGet('playlistID');
             $builder
-                ->join('playlist_track', 'playlist_track.music_id = music.music_id')
-                ->where('playlist_track.playlist_id', $playlistID)
+                ->join('subaybayan', 'subaybayan.music_id = music.music_id')
+                ->where('subaybayan.playlist_id', $playlistID)
                 ->like('music.title', $searchTerm);
         } else {
-            //nag iisp pa
+            
         }
 
-        // Get the search results
+
         $results = $builder->get()->getResultArray();
 
-        // Pass the search results to the view
+    
         $data = [
             'music' => $results,
-            'playlists' => $this->playlists->findAll(),
+            'spotify' => $this->spotify->findAll(),
             'context' => $context,
         ];
 
-        return view('main', $data);
+        return view('viewmain', $data);
     }
 
 

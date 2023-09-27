@@ -6,9 +6,9 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
-$routes->get('/main', 'MusicController::main');
+$routes->get('/viewmain', 'MusicController::viewmain');
 $routes->post('/saveMusic', 'MainController::saveMusic');
-$routes->post('/upload', 'MusicController::upload');
+$routes->post('/magupload', 'MusicController::magupload');
 $routes->post('/create_playlist', 'MusicController::create_playlist');
 $routes->get('/edit_playlist/(:any)', 'MusicController::edit_playlist/$1');
 $routes->get('/delete_playlist/(:any)', 'MusicController::delete_playlist/$1');
